@@ -1,0 +1,2 @@
+* tg-mode
+Emacs major mode for editing [[https:tangram.dev][Tangram]] typescript with LSP support.  Ensure the ~tg~ binary is available in your ~$PATH~.
