@@ -1,9 +1,12 @@
 ;; -*- lexical-binding: t; -*-
 ;;; tg-mode/config.el
 
-(use-package! typescript-mode)
+(require 'typescript-mode)
 
-(use-package! tg-mode
-  :mode ("\\.tg\\'" . tg-mode)
-  :init
-  (setq lsp-command '("tg" "lsp")))
+(define-derived-mode tg-mode typescript-mode "tg"
+  "Major mode for editing .tg files"
+  (setq-local lsp-command '("tg" "lsp")))
+
+(add-to-list 'auto-mode-alist '("\\.tg\\'" . tg-mode))
+
+(provide 'tg-mode)
