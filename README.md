@@ -1,6 +1,6 @@
 # tg-mode
 
-Emacs major mode for editing [https://tangram.dev](Tangram) typescript with LSP support.
+Emacs major mode for editing [Tangram](https://tangram.dev) typescript with LSP support.
 
 ## Usage
 
