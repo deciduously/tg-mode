@@ -12,7 +12,6 @@
 (define-derived-mode tg-mode typescript-mode "Tangram Typescript"
   "Major mode for editing .tg files.")
  
-
 (add-to-list 'auto-mode-alist '("\\.tg\\'" . tg-mode))
 
 (with-eval-after-load 'lsp-mode
@@ -21,7 +20,7 @@
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-stdio-connection '("tg" "lsp"))
                     :activation-fn (lsp-activate-on "Tangram Typescript")
-                    :served-id 'tglsp)))
+                    :language-id 'tglsp)))
 
 (provide 'tg-mode)
 
